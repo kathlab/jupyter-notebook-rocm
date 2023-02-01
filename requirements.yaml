@@ -1,0 +1,17 @@
+channels:
+  - conda-forge
+  - defaults # anaconda
+dependencies:
+  - conda-forge::ncurses # fixes: libtinfo.so.6: no version information available (required by bash)
+  - ipykernel # vscode jupyter notebook
+  - ipython # vscode jupyter notebook
+  - matplotlib # create figures
+  - notebook # jupyter notebook
+  - numpy # everything numbers
+  - pandas # vscode
+  - python==3.7.13
+  - scikit-learn # machine learning and data mining
+  - seaborn # statistical data visualization
+  #- libgcc-ng #>=11.2.0 # pytorch
+  - pip
+  # - pip:
