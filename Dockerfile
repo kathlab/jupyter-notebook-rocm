@@ -26,6 +26,9 @@ ADD --checksum=sha256:00938c3534750a0e4069499baf8f4e6dc1c2e471c86a59caa0dd03f4a9
 RUN chmod a+x /${CONDASETUP}
 RUN /bin/bash /${CONDASETUP} -b -p ${CONDADIR} # /bin/bash workaround for defect shellscript
 
+## update conda if current version is not up-to-date
+RUN conda update -n base -c defaults conda
+
 ### setup conda environment
 COPY ${CONDADEPS} /root/
 RUN ${CONDADIR}/bin/conda env create -n juno -f /root/${CONDADEPS}
